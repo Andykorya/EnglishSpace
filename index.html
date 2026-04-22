@@ -3,27 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnglishSpace — Твій шлях до вільної англійської</title>
+    <title>EnglishSpace</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
+
+    <header class="main-header">
+        <nav class="container">
             <div class="logo">EnglishSpace</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="courses.html">Курси</a></li>
                 <li><a href="profile.html">Кабінет</a></li>
-                <li><a href="cart.html">Кошик</a></li>
+                <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i> Кошик</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        </main>
+        <section class="hero fade-in">
+            <div class="hero-content container">
+                <h1>Заговори англійською вільно</h1>
+                <p>Інтерактивне навчання, що підлаштовується під твій темп життя.</p>
+                <a href="courses.html" class="btn btn-main pulse">Обрати курс</a>
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 EnglishSpace. Всі права захищено.</p>
+        <section class="featured-courses container fade-in-delayed">
+            <h2>Наші напрямки</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-info">
+                        <h3>General English</h3>
+                        <p>Від А1 до С1. Розмовна практика та граматика.</p>
+                        <span class="price">1500 грн</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-outline">Придбати</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <h3>Business Pro</h3>
+                        <p>Для роботи, переговорів та ділового листування.</p>
+                        <span class="price">2500 грн</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-outline">Придбати</a>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-info">
+                        <h3>IELTS Intensive</h3>
+                        <p>Підготовка до міжнародного іспиту за 2 місяці.</p>
+                        <span class="price">3200 грн</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-outline">Придбати</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">EnglishSpace</div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 EnglishSpace. Зроблено з любов'ю до мови.</p>
+        </div>
     </footer>
+
 </body>
 </html>
