@@ -261,3 +261,159 @@ nav {
     .nav-links { display: none; }
     .course-grid { grid-template-columns: 1fr; }
 }
+
+/* =========================================
+   СТИЛІ ДЛЯ СТОРІНКИ ДЕТАЛЕЙ КУРСУ
+   ========================================= */
+
+/* Відступ зверху, щоб шапка не перекривала текст */
+.page-top-padding {
+    padding-top: 100px;
+}
+
+/* Шапка конкретного курсу */
+.course-header {
+    background: var(--bg-light);
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.badge {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.course-header h1 {
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.course-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+/* Розташування у дві колонки */
+.course-content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.course-main-info {
+    flex: 2; /* Займає більше місця */
+}
+
+.course-main-info h2, .course-main-info h3 {
+    color: var(--primary-color);
+    margin: 30px 0 15px;
+}
+
+/* Список того, що вивчать */
+.check-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.check-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+.check-list i {
+    color: #27ae60; /* Зелена галочка */
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* Програма курсу (Модулі) */
+.syllabus {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.module {
+    margin-bottom: 25px;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+}
+
+.module h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Права панель (Sidebar з покупкою) */
+.course-sidebar {
+    flex: 1; /* Займає менше місця */
+    position: sticky;
+    top: 100px; /* Прилипає при скролі */
+}
+
+.booking-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.video-placeholder {
+    background: var(--primary-color);
+    color: var(--white);
+    height: 180px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.video-placeholder:hover {
+    background: var(--accent-color);
+}
+
+.video-placeholder i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sidebar-features {
+    text-align: left;
+    border-top: none;
+}
+
+/* Адаптивність для мобілок (робимо 1 колонку замість 2) */
+@media (max-width: 900px) {
+    .course-content-wrapper {
+        flex-direction: column;
+    }
+    .course-sidebar {
+        width: 100%;
+        position: static;
+    }
+}
