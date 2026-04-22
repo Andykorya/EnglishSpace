@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення — EnglishSpace</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇬🇧</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container">
+            <div class="logo">EnglishSpace</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="courses.html">Курси</a></li>
+                <li><a href="profile.html">Кабінет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-top-padding">
+        <section class="container fade-in">
+            <h1 class="page-title">Оформлення замовлення</h1>
+            <p class="page-subtitle">Заповніть дані нижче, щоб отримати миттєвий доступ до навчання.</p>
+        </section>
+
+        <section class="checkout-wrapper container fade-in-delayed">
+            
+            <div class="checkout-form-section">
+                <div class="checkout-block">
+                    <h2>1. Контактні дані</h2>
+                    <form class="order-form">
+                        <div class="form-group">
+                            <label for="name">Ім'я та прізвище</label>
+                            <input type="text" id="name" placeholder="Наприклад: Тарас Шевченко" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Електронна пошта (сюди прийде доступ)</label>
+                            <input type="email" id="email" placeholder="taras@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефону</label>
+                            <input type="tel" id="phone" placeholder="+38 (000) 000-00-00" required>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-block">
+                    <h2>2. Спосіб оплати</h2>
+                    <div class="payment-methods">
+                        <label class="payment-method active-method">
+                            <input type="radio" name="payment" checked>
+                            <span><i class="far fa-credit-card"></i> Банківська картка (Visa / Mastercard)</span>
+                        </label>
+                        <label class="payment-method">
+                            <input type="radio" name="payment">
+                            <span><i class="fab fa-apple"></i> Apple Pay / Google Pay</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="order-summary-sidebar">
+                <div class="order-summary-card">
+                    <h2>Ваше замовлення</h2>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4 id="cart-course-name">Курс не обрано</h4>
+                            <p>Доступ назавжди + сертифікат</p>
+                        </div>
+                        <div class="cart-item-price" id="cart-course-price">0 грн</div>
+                    </div>
+
+                    <div class="promo-code-box">
+                        <input type="text" placeholder="Промокод (якщо є)">
+                        <button class="btn btn-outline">Застосувати</button>
+                    </div>
+
+                    <div class="summary-total">
+                        <span>Разом до оплати:</span>
+                        <span class="total-price" id="cart-total-price">0 грн</span>
+                    </div>
+
+                    <a href="profile.html" class="btn btn-main pay-btn">Оплатити замовлення</a>
+                    <p class="secure-checkout"><i class="fas fa-lock"></i> Ваші дані захищено 256-бітним шифруванням.</p>
+                </div>
+            </aside>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">EnglishSpace</div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 EnglishSpace. Всі платежі надійно захищені.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Отримуємо параметри з посилання (URL)
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseName = urlParams.get('course');
+            const coursePrice = urlParams.get('price');
+
+            // Якщо ми знайшли параметри курсу в посиланні
+            if (courseName && coursePrice) {
+                // Форматуємо ціну (наприклад, 3500 перетворюємо на "3 500 грн")
+                const formattedPrice = parseInt(coursePrice).toLocaleString('uk-UA') + ' грн';
+
+                // Знаходимо наші елементи по ID і змінюємо в них текст
+                document.getElementById('cart-course-name').textContent = 'Курс "' + courseName + '"';
+                document.getElementById('cart-course-price').textContent = formattedPrice;
+                document.getElementById('cart-total-price').textContent = formattedPrice;
+            }
+        });
+    </script>
+</body>
+</html>

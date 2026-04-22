@@ -574,3 +574,291 @@ nav {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   СТИЛІ ДЛЯ СТОРІНКИ ОФОРМЛЕННЯ (CHECKOUT)
+   ========================================= */
+
+.checkout-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 80px;
+}
+
+.checkout-form-section {
+    flex: 2;
+}
+
+.checkout-block {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.checkout-block h2 {
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 10px;
+}
+
+/* Форми */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* Способи оплати */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.payment-method:hover {
+    background: var(--bg-light);
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.2);
+}
+
+.payment-method span i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Права колонка (Підсумок) */
+.order-summary-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 100px;
+}
+
+.order-summary-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 2px solid var(--primary-color);
+}
+
+.order-summary-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.cart-item-info p {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.cart-item-price {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.promo-code-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.promo-code-box input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.total-price {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+}
+
+.pay-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.secure-checkout {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #27ae60;
+}
+
+.secure-checkout i {
+    margin-right: 5px;
+}
+
+/* Адаптивність для кошика */
+@media (max-width: 900px) {
+    .checkout-wrapper {
+        flex-direction: column-reverse; /* На мобільному підсумок буде вище форми */
+    }
+    .order-summary-sidebar {
+        width: 100%;
+        position: static;
+    }
+}
+
+/* --- СТИЛІ ДЛЯ КАБІНЕТУ СТУДЕНТА --- */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-light);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.course-progress-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 12px;
+    background: #eee;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+.achievement-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.achieve-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: var(--white);
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.achieve-item i {
+    color: #f1c40f;
+    font-size: 1.2rem;
+}
+
+.achieve-item.inactive {
+    opacity: 0.5;
+    filter: grayscale(1);
+}
+
+@media (max-width: 768px) {
+    .profile-grid { grid-template-columns: 1fr; }
+    .profile-header { flex-direction: column; text-align: center; gap: 20px; }
+}
