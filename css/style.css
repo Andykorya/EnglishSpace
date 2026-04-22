@@ -11,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Виправлено */
+    box-sizing: border-box;
 }
 
 body {
@@ -119,6 +119,7 @@ nav {
 .btn-outline {
     border: 2px solid var(--primary-color);
     color: var(--primary-color);
+    text-align: center;
 }
 
 .btn-outline:hover {
@@ -129,8 +130,8 @@ nav {
 /* --- КАРТКИ КУРСІВ --- */
 .course-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
     margin-top: 50px;
 }
 
@@ -147,6 +148,40 @@ nav {
 
 .course-card:hover {
     transform: translateY(-10px);
+}
+
+.course-card h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.course-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Списки характеристик курсу */
+.course-features {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.course-features li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.course-features i {
+    color: var(--accent-color);
+    margin-right: 10px;
+    width: 15px;
+    text-align: center;
 }
 
 .price {
@@ -223,6 +258,6 @@ nav {
 /* --- АДАПТИВНІСТЬ (MOBILE) --- */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
-    .nav-links { display: none; } /* Для простоти поки ховаємо меню на мобілці */
+    .nav-links { display: none; }
     .course-grid { grid-template-columns: 1fr; }
 }
